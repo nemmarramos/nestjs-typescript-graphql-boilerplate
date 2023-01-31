@@ -15,12 +15,12 @@ type User {
 scalar Date
 
 type Query {
-  recipe(id: String!): User!
-  recipes(offset: Int! = 0, limit: Int! = 25): [User!]!
+  user(id: String!): User!
+  users(offset: Int! = 0, limit: Int! = 25): [User!]!
 }
 
 type Mutation {
-  addRecipe(newUserData: NewUserInput!): User!
+  addUser(newUserData: NewUserInput!): User!
   removeUser(id: String!): Boolean!
 }
 
