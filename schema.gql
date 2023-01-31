@@ -1,0 +1,30 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+directive @upper on FIELD_DEFINITION
+
+"""user"""
+type User {
+  id: ID!
+  username: String!
+  password: String!
+}
+
+"""Date custom scalar type"""
+scalar Date
+
+type Query {
+  recipe(id: String!): User!
+  recipes(offset: Int! = 0, limit: Int! = 25): [User!]!
+}
+
+type Mutation {
+  addRecipe(newUserData: NewUserInput!): User!
+  removeUser(id: String!): Boolean!
+}
+
+input NewUserInput {
+  username: String!
+  password: String!
+}
